@@ -44,7 +44,7 @@ const Maquininha = [
 
 export function SectionMachines() {
     return(
-        <ContainerGrid className="pt-60 flex flex-col items-center justify-center pb-28">
+        <ContainerGrid className="pt-28 flex flex-col items-center justify-center pb-28 @desktop:pt-40">
             <h2 className="text-4xl text-black font-bold text-center w-full max-w-[530px]">Conheça as soluções de maquinihas de cartão da rede</h2>
             <div className="w-full flex flex-col">
                 <div className="flex items-center justify-center">
@@ -55,14 +55,14 @@ export function SectionMachines() {
                         <p className="text-lg text-black/40 font-bold group-hover:text-BlueNext ">integrada no sistema TEF</p>
                     </div>
                 </div>
-                <div className="w-full flex items-center justify-between mt-20">
+                <div className="w-full grid grid-cols-2 grid-rows-2 gap-4 items-start justify-start mt-20 @desktop:grid-cols-4 @desktop:grid-rows-1">
                     {Maquininha.map((item, index)=> (
-                        <div key={index} className="flex flex-col">
-                            <div className="relative bg-slate-300/40">
+                        <div key={index} className="flex flex-col items-start justify-start w-full h-full">
+                            <div className="relative flex items-center justify-center bg-slate-300/40 w-full">
                                 <p className={`absolute ${item.MVendido} z-10 top-4 right-4 bg-white p-3 text-BlueNext text-xs font-bold rounded-lg`}>{item.TxtVendido}</p>
                                 <Image className="relative" src={item.Image} alt={item.Title} width={280} height={328}/>
                             </div>
-                            <div className="flex flex-col gap-3 border-b border-black/40 pb-4">
+                            <div className="flex flex-col gap-3 border-b border-black/40 py-4 w-full">
                                 <h4 className="text-xl text-black/90 font-bold">{item.Title}<br/><span className="text-BlueNext">{item.Tipo}</span></h4>
                                 <div className="flex items-center gap-3">
                                     <Image src={"/IconWifeGray.svg"} alt={"Icone-Wife"} width={18} height={18}/>

@@ -16,8 +16,14 @@ module.exports = {
         'HeigthHome': '657px',
       },
       colors: {
-        'BlueNext': '#00A3A3',
-      }
+        'BlueMarineNext': '#00A3A3',
+        'OrangeNext': '#de6e16',
+        'BlueNext': '#256c95',
+      },
+      screens: {
+        '@desktop': '1024px',
+        '@tablet': '640px',
+      },
     },
   },
   plugins: [],
